@@ -1,0 +1,33 @@
+# Default SSH configuration
+
+# Use a specific identity file for a host
+Host myserver
+    HostName 192.168.1.100
+    User myusername
+    IdentityFile ~/.ssh/id_rsa
+
+# Define a shorthand alias for a host
+Host alias
+    HostName example.com
+    User username
+
+# Use a different port for a host
+Host server2
+    HostName server2.example.com
+    User myusername
+    Port 2222
+
+# Define SSH connection options for a host
+Host myhost
+    HostName myhost.example.com
+    User myusername
+    Port 22
+    ForwardAgent yes
+    Compression yes
+    ServerAliveInterval 60
+
+# Use a specific proxy command for a host
+Host internal-server
+    HostName internal.example.com
+    User myusername
+    ProxyCommand ssh -q gateway.example.com nc %h %p

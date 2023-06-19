@@ -1,0 +1,55 @@
+" Enable syntax highlighting
+syntax enable
+
+" Set the colorscheme (choose one)
+colorscheme desert
+"colorscheme gruvbox
+"colorscheme molokai
+
+" Set the indentation
+set tabstop=4       " Number of spaces for a tab
+set softtabstop=4   " Number of spaces for a soft tab
+set shiftwidth=4    " Number of spaces to use for autoindent
+set expandtab       " Use spaces instead of tabs
+
+" Enable line numbers
+set number
+
+" Enable searching as you type
+set incsearch
+
+" Enable case-insensitive searching
+set ignorecase
+
+" Enable highlighting of search matches
+set hlsearch
+
+" Show matching brackets
+set showmatch
+
+" Enable mouse support
+set mouse=a
+
+" Enable line wrapping
+set wrap
+
+" Enable auto-indentation
+set autoindent
+
+" Enable file type detection
+filetype plugin indent on
+
+" Enable clipboard support
+set clipboard+=unnamedplus
+
+" Define custom key mappings
+map <F2> :NERDTreeToggle<CR>
+
+" Enable NERDTree plugin (if installed)
+" Plugin 'preservim/nerdtree'
+
+" Enable airline plugin (if installed)
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+
+" Additional plugin configurations can be added below this line
