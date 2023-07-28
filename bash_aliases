@@ -1,5 +1,5 @@
 # Classic
-alias read="echo 'Michael Williamson can not read'"
+alias michael="echo 'Michael Williamson doesn't know how to read'"
 
 # Aliases for file listing
 alias ll='ls -alF'
