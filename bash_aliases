@@ -17,3 +17,6 @@ alias update='sudo nala update'
 alias upgrade='sudo nala upgrade'
 alias install='sudo nala install'
 alias remove='sudo nala remove'
+
+# Aliases for seeing who on da system
+alias whoon='top -bn1 | awk 'NR>7 {print $2}' | sort -u'
