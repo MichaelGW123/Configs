@@ -16,10 +16,10 @@ alias wgpu='watch -n 1 nvidia-smi'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Aliases for package management
-alias update='sudo nala update'
-alias upgrade='sudo nala upgrade'
-alias install='sudo nala install'
-alias remove='sudo nala remove'
+alias snupdate='sudo nala update'
+alias snupgrade='sudo nala upgrade'
+alias sninstall='sudo nala install'
+alias snremove='sudo nala remove'
 
 # Aliases for seeing who on da system
 alias whoon="top -bn1 | awk 'NR>7 {print $2}' | sort -u"
