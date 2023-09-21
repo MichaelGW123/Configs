@@ -49,6 +49,29 @@ xterm*|rxvt*)
     ;;
 esac
 
+# Define a function to automatically activate the environment
+tf_activate_env() {
+   conda activate tf
+}
+
+# Define a function to automatically deactivate the environment
+deactivate_env() {
+   conda deactivate
+}
+
+# Store the project's main directory path
+PROJECT_DIR="/path/to/your/project"
+
+# Automatically activate the environment when changing into your project directory
+cd() {
+   builtin cd "$@"
+   if [[ "$(pwd)" == "$PROJECT_DIR"* ]]; then
+       tf_activate_env
+   else
+       deactivate_env
+   fi
+}
+
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
